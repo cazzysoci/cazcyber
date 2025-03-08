@@ -19,6 +19,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 def banner():
     print("""
+\033[0;36m
 
  ▄████▄   ▄▄▄      ▒███████▒▒███████▒▓██   ██▓  ██████  ▒█████   ▄████▄   ██▓
 ▒██▀ ▀█  ▒████▄    ▒ ▒ ▒ ▄▀░▒ ▒ ▒ ▄▀░ ▒██  ██▒▒██    ▒ ▒██▒  ██▒▒██▀ ▀█  ▓██▒
@@ -33,6 +34,7 @@ def banner():
 
     Powered by CazzySoci
 
+\033[0;36m
     """)
 
 
